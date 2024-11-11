@@ -1,11 +1,12 @@
-@font-face {
-  font-family: SteakRough;
-  src: url(/fonts/Steak_Rough.otf) format('opentype');
-}
+@font-face {font-family: SteakRough; src: url(/fonts/Steak_Rough.otf) format('opentype');}
 
 body {
   padding: 0;
   margin: 0;
+  background-image: url(/backdrop.jpg);
+  background-size: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* header section */
@@ -13,6 +14,7 @@ header {
   background-color: #ECB8C9;
   padding: 0;
   margin: 0;
+  margin-left: -40px;
 }
 
 header > ul {
@@ -33,8 +35,68 @@ ul > li:hover {
   border-radius: 3pc;
   cursor: pointer;
 }
+
 .header-list-item  {
   text-decoration: none;
   color: #163C4F;
   font-family: SteakRough;
+}
+
+a, a:active {
+  text-decoration: none;
+  color: #163C4F;
+}
+
+
+@media screen and (max-width: 600px){
+  body {
+      background-image: url(/backdrop.jpg);
+      background-size: 400vw;
+      background-position: top;
+  }
+
+  header {
+      background: none;
+  }
+
+  header > ul {
+      display: flex;
+      flex-direction: row;
+  }
+
+  .header-list-item > a {
+      color: white;
+  }
+
+  .header-logo {
+      display: none;
+  }
+}
+
+/* home page */
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45vh;
+  align-items: center;
+  gap: 15px;
+}
+
+.homepage-container > p {
+  color: white;
+  font-family: SteakRough;
+}
+
+.homepage-container > button {
+  background: none;
+  border: solid white;
+  color: white;
+  padding: 10px;
+  transition: 0.1s;
+}
+
+.homepage-container > button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
 }
