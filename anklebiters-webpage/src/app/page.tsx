@@ -1,5 +1,4 @@
 import Header from "../app/components/Header"
-import anklebitersLogo from "/anklebiters-logo-white.png"
 
 export default function Home() {
   return (
