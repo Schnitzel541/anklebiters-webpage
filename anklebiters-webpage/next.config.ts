@@ -4,4 +4,8 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+module.exports = {
+  distDir: 'out',
+}
+
 export default nextConfig;
